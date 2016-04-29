@@ -2,8 +2,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Modal = require('../../lib/index');
 
-var appElement = document.getElementById('example');
-
 Modal.setAppElement('#example');
 
 var App = React.createClass({
@@ -66,4 +64,7 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(<App/>, appElement);
+window.buildBasic = function() {
+  var appElement = document.getElementById('example');
+  ReactDOM.render(<App/>, appElement);
+}
